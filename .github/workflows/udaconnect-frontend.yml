@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: udaconnect app - Package with Docker
+name: udaconnect frontend - Package with Docker
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -45,4 +45,4 @@ jobs:
           file: ./modules/app/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-app:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-app:${{ github.sha}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:${{ github.sha}}
