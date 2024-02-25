@@ -7,7 +7,7 @@ name: udaconnect api - Package with Docker
 #on: [push]
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 #  pull_request:
 #    branches: [ master ]
 
