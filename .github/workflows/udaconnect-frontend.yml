@@ -41,8 +41,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./modules/app
-          file: ./modules/app/Dockerfile
+          context: ./modules/frontend
+          file: ./modules/frontend/Dockerfile
           platforms: linux/amd64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:${{ github.sha}}
