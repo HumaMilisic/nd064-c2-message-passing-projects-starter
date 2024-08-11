@@ -31,7 +31,7 @@ spec:
         service: udaconnect-api
     spec:
       containers:
-      - image: humamilisic/nd064-udaconnect-api:latest
+      - image: humamilisic/nd064-udaconnect-api-person:latest
         name: udaconnect-api
         imagePullPolicy: Always
         env:

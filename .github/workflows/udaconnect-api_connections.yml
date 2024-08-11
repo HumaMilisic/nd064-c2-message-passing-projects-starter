@@ -45,4 +45,4 @@ jobs:
           file: ./modules/api_connection/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-api_connection:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-api:${{ github.sha}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nd064-udaconnect-api-connection:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-api:${{ github.sha}}

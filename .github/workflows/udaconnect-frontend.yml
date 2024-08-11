@@ -45,4 +45,4 @@ jobs:
           file: ./modules/frontend/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:${{ github.sha}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nd064-udaconnect-frontend:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-frontend:${{ github.sha}}
