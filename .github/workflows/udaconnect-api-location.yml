@@ -42,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./modules/api_location
-          file: ./modules/api_locationDockerfile
+          file: ./modules/api_location/Dockerfile
           platforms: linux/amd64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-api_location:latest,${{ secrets.DOCKERHUB_USERNAME }}/udaconnect-api:${{ github.sha}}
