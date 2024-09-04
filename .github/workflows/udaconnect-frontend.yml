@@ -47,4 +47,4 @@ jobs:
           file: ./modules/frontend/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{REPOSITORY_NAME}}:latest,${{ secrets.DOCKERHUB_USERNAME }}/${{REPOSITORY_NAME}}:${{ github.sha}}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{env.REPOSITORY_NAME}}:latest,${{ secrets.DOCKERHUB_USERNAME }}/${{env.REPOSITORY_NAME}}:${{ github.sha}}
