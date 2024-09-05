@@ -31,9 +31,16 @@ spec:
         service: udaconnect-app
     spec:
       containers:
-      - image: humamilisic/nd064-udaconnect-app:latest
+      - image: humamilisic/nd064-udaconnect-frontend:e941308c004052edd389ca7a603e9dfaf06cda8b
         name: udaconnect-app
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: REACT_APP_API_KEY
+            value: "olaaaaaaaaaaaaaaaaaaaaaaaaaaaa env file radi"
+          - name: REACT_APP_REST_API_PERSONS
+            value: 'http://localhost:30002/api/persons'
+          - name: REACT_APP_REST_API_CONNECTIONS
+            value: 'http://localhost:30002/api/persons'
         resources:
           requests:
             memory: "128Mi"

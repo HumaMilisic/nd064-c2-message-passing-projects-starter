@@ -2,38 +2,38 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: udaconnect-api
-  name: udaconnect-api
+    service: udaconnect-rest-api
+  name: udaconnect-rest-api
 spec:
   ports:
   - name: "5000"
     port: 5000
     targetPort: 5000
-    nodePort: 30001
+    nodePort: 30002
   selector:
-    service: udaconnect-api
+    service: udaconnect-rest-api
   type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: udaconnect-api
-  name: udaconnect-api
+    service: udaconnect-rest-api
+  name: udaconnect-rest-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: udaconnect-api
+      service: udaconnect-rest-api
   template:
     metadata:
       labels:
-        service: udaconnect-api
+        service: udaconnect-rest-api
     spec:
       containers:
-      - image: humamilisic/nd064-udaconnect-api:0700825b4cb6070f9b21b5ed956ab7e36fd27428
-        name: udaconnect-api
-        imagePullPolicy: Always
+      - image: humamilisic/nd064-udaconnect-rest-api:latest
+        name: udaconnect-rest-api
+        imagePullPolicy: IfNotPresent
         env:
         - name: DB_USERNAME
           valueFrom:
